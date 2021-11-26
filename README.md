@@ -1,4 +1,4 @@
-# durgabeej
+# AgriApp
 
 A new Flutter project.
 
