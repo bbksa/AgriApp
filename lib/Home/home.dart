@@ -1,4 +1,5 @@
 import 'package:durgabeej/Home/home_body.dart';
+import 'package:durgabeej/footer.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -24,84 +25,24 @@ class Home extends StatelessWidget {
           ),
         ),
         title: const SizedBox(
-          height: 35.0, child: Text("Durga Beej Bhandar")),
+          height: 25.0, child: Text("Durga Beej Bhandar")),
         actions: const <Widget>[
           Padding(
             padding: EdgeInsets.only(right: 12.0),
-            child: Icon(Icons.notifications),
+            child: IconButton(
+                    icon: Icon(
+                      Icons.notifications,
+                      color: Color(0xFFFFFFFF),
+                    ),
+                    onPressed: null,
+                  ),
           )
         ],
       ),
       // Body
       body: const HomeBody(),
       // Footer
-      bottomNavigationBar: Container(
-        color: Colors.white,
-        height: 65.0,
-        alignment: Alignment.center,
-        child: BottomAppBar(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              Column(
-                children: <Widget>[
-                  IconButton(
-                    icon: const Icon(
-                      Icons.home,
-                    ),
-                    onPressed: () {},
-                  ),
-                  const Text("Home"),
-                ],
-              ),
-              Column(
-                children: <Widget>[
-                  IconButton(
-                    icon: const Icon(
-                      Icons.school,
-                    ),
-                    onPressed: () {},
-                  ),
-                  const Text("Education"),
-                ],
-              ),
-              Column(
-                children: <Widget>[
-                  IconButton(
-                    icon: const Icon(
-                      Icons.shop_2,
-                    ),
-                    onPressed: () {},
-                  ),
-                  const Text("Shop"),
-                ],
-              ),
-              Column(
-                children: <Widget>[
-                  IconButton(
-                    icon: const Icon(
-                      Icons.shopping_cart_outlined,
-                    ),
-                    onPressed: () {},
-                  ),
-                  const Text("Cart"),
-                ],
-              ),
-              Column(
-                children: <Widget>[
-                  IconButton(
-                    icon: const Icon(
-                      Icons.account_circle_sharp
-                    ),
-                    onPressed: () {},
-                  ),
-                  const Text("Account"),
-                ],
-              ),
-            ],
-          ),
-        ),
-      )
+      bottomNavigationBar: const Footer()
     );
   }
 }
