@@ -2,14 +2,14 @@ import 'package:durgabeej/Shop/product.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class Insecticides extends StatefulWidget {
-  const Insecticides({ Key? key }) : super(key: key);
+class Fungicides extends StatefulWidget {
+  const Fungicides({ Key? key }) : super(key: key);
 
   @override
-  _InsecticidesState createState() => _InsecticidesState();
+  _FungicidesState createState() => _FungicidesState();
 }
 
-class _InsecticidesState extends State<Insecticides> {
+class _FungicidesState extends State<Fungicides> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +18,7 @@ class _InsecticidesState extends State<Insecticides> {
         centerTitle: true,
         elevation: 1.0,
         title: const SizedBox(
-          height: 25.0, child: Text("Insecticide")),
+          height: 25.0, child: Text("Fungicide")),
           actions: const <Widget>[
             Padding(
               padding: EdgeInsets.only(right: 12.0),
@@ -41,7 +41,7 @@ class _InsecticidesState extends State<Insecticides> {
                       padding: const EdgeInsets.all(4),
                       color: Colors.green.shade800,
                       margin: const EdgeInsets.only(left: 8,top: 8,right: 8),
-                      child: const Text("Insecticides",style: TextStyle(fontSize: 24,color: Colors.white), textAlign: TextAlign.center)
+                      child: const Text("Fungicides",style: TextStyle(fontSize: 24,color: Colors.white), textAlign: TextAlign.center)
                     ),
                     Container(
                       color: Colors.green.shade100,
