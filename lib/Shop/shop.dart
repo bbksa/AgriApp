@@ -36,7 +36,7 @@ class ShopState extends State<Shop> {
         ],
       ),
 
-      body: ListView(
+            body: ListView(
               children: <Widget>[
                 // CarouselSlider
                 CarouselSlider(
@@ -292,50 +292,68 @@ class ShopState extends State<Shop> {
                   ]
                 ),
 
-                // // Products Shopping
-                // GridView.count(
-                //   primary: false,
-                //   padding: const EdgeInsets.all(20),
-                //   crossAxisSpacing: 10,
-                //   mainAxisSpacing: 10,
-                //   crossAxisCount: 2,
-                //   children: <Widget>[
-                //     Container(
-                //       padding: const EdgeInsets.all(8),
-                //       child: const Text("He'd have you all unravel at the"),
-                //       color: Colors.teal[100],
-                //     ),
-                //     Container(
-                //       padding: const EdgeInsets.all(8),
-                //       child: const Text('Heed not the rabble'),
-                //       color: Colors.teal[200],
-                //     ),
-                //     Container(
-                //       padding: const EdgeInsets.all(8),
-                //       child: const Text('Sound of screams but the'),
-                //       color: Colors.teal[300],
-                //     ),
-                //     Container(
-                //       padding: const EdgeInsets.all(8),
-                //       child: const Text('Who scream'),
-                //       color: Colors.teal[400],
-                //     ),
-                //     Container(
-                //       padding: const EdgeInsets.all(8),
-                //       child: const Text('Revolution is coming...'),
-                //       color: Colors.teal[500],
-                //     ),
-                //     Container(
-                //       padding: const EdgeInsets.all(8),
-                //       child: const Text('Revolution, they...'),
-                //       color: Colors.teal[600],
-                //     ),
-                //   ],
-                // ),
-
+                // Products Shopping
+                ListView(
+                  shrinkWrap: true,
+                  children: [
+                    Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.all(4),
+                      color: Colors.green.shade800,
+                      margin: const EdgeInsets.only(left: 8,top: 8,right: 8),
+                      child: const Text("Best Selling Products",style: TextStyle(fontSize: 24,color: Colors.white), textAlign: TextAlign.center)
+                    ),
+                    Container(
+                      color: Colors.green.shade100,
+                      margin: const EdgeInsets.only(left: 8,right: 8),
+                      height: 450,
+                      child: GridView.count(
+                        primary: false,
+                        padding: const EdgeInsets.all(20),
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 10,
+                        crossAxisCount: 2,
+                        children: <Widget>[
+                          Container(
+                            padding: const EdgeInsets.all(8),
+                            child: Flexible(
+                              fit: FlexFit.loose,
+                              child: Image.network(
+                                "https://lh3.googleusercontent.com/p/AF1QipNSco18zvjwr1xtAf1jJVCa8VvuHvijcywchOSP=w768-h768-n-o-v1",
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            color: Colors.teal[100],
+                          ),
+                          Container(
+                            padding: const EdgeInsets.all(8),
+                            child: Flexible(
+                              fit: FlexFit.loose,
+                              child: Image.network(
+                                "https://lh3.googleusercontent.com/p/AF1QipNSco18zvjwr1xtAf1jJVCa8VvuHvijcywchOSP=w768-h768-n-o-v1",
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            color: Colors.teal[200],
+                          ),
+                          Container(
+                            padding: const EdgeInsets.all(8),
+                            child: Flexible(
+                              fit: FlexFit.loose,
+                              child: Image.network(
+                                "https://lh3.googleusercontent.com/p/AF1QipNSco18zvjwr1xtAf1jJVCa8VvuHvijcywchOSP=w768-h768-n-o-v1",
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            color: Colors.teal[300],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
-        
 
       // Footer
       bottomNavigationBar: const Footer()
