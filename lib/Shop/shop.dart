@@ -119,30 +119,35 @@ class ShopState extends State<Shop> {
                     Container(
                       color: Colors.green.shade300,
                       margin: const EdgeInsets.only(left: 8,right: 8),
-                      height: 100,
+                      padding: const EdgeInsets.all(8),
+                      height: 160,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: <Widget>[
                           InkWell(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Container(
-                                  height: 80,
-                                  width: 80,
-                                  // color: Colors.teal[300],
-                                  padding: const EdgeInsets.all(8),
-                                    child: Image.network(
-                                      "https://static.thenounproject.com/png/3779813-200.png",
-                                      fit: BoxFit.cover,
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 8),
+                              width: 115,
+                              height: 120,
+                              padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                              color: Colors.green.shade100,
+                              child: Column(
+                                children: <Widget>[
+                                  const Text("Insecticide", style: TextStyle(fontSize: 18,color: Colors.black, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
+                                  const SizedBox(height: 10),
+                                  Container(
+                                    width: 100,
+                                    height: 100,
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: NetworkImage('https://www.openaccessgovernment.org/wp-content/uploads/2021/03/stale.jpg'),
+                                        fit: BoxFit.cover
+                                      ),
                                     ),
-                                ),
-                                const Text(
-                                  "Insecticide",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                              ],
+                                  ),
+                                ],
+                              ),
                             ),
                             onTap: () {
                               Navigator.push(context, 
@@ -155,25 +160,29 @@ class ShopState extends State<Shop> {
                             },
                           ),
                           InkWell(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Container(
-                                  height: 80,
-                                  width: 80,
-                                  // color: Colors.teal[300],
-                                  padding: const EdgeInsets.all(8),
-                                    child: Image.network(
-                                      "https://w7.pngwing.com/pngs/842/321/png-transparent-cockroach-pest-control-exterminator-fumigation-cockroach-thumbnail.png",
-                                      fit: BoxFit.cover,
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 8),
+                              width: 115,
+                              height: 120,
+                              padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                              color: Colors.green.shade100,
+                              child: Column(
+                                children: <Widget>[
+                                  const Text("Fungicide", style: TextStyle(fontSize: 18,color: Colors.black, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
+                                  const SizedBox(height: 10),
+                                  Container(
+                                    width: 100,
+                                    height: 100,
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: NetworkImage('https://5.imimg.com/data5/SELLER/Default/2020/12/WZ/UD/ZX/54087093/fungicide-500x500.jpg'),
+                                        fit: BoxFit.cover
+                                      ),
                                     ),
-                                ),
-                                const Text(
-                                  "Fungicide",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                              ],
+                                  ),
+                                ],
+                              ),
                             ),
                             onTap: () {
                               Navigator.push(context, 
@@ -185,30 +194,181 @@ class ShopState extends State<Shop> {
                               );
                             },
                           ),
-                           InkWell(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Container(
-                                  height: 80,
-                                  width: 80,
-                                  // color: Colors.teal[300],
-                                  padding: const EdgeInsets.all(8),
-                                    child: Image.network(
-                                      "https://cdn-icons-png.flaticon.com/512/25/25207.png",
-                                      fit: BoxFit.cover,
+                          InkWell(
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 8),
+                              width: 115,
+                              height: 120,
+                              padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                              color: Colors.green.shade100,
+                              child: Column(
+                                children: <Widget>[
+                                  const Text("Herbicide", style: TextStyle(fontSize: 18,color: Colors.black, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
+                                  const SizedBox(height: 10),
+                                  Container(
+                                    width: 100,
+                                    height: 100,
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: NetworkImage('https://www.ces.ncsu.edu/wp-content/uploads/2015/09/weedkiller.jpg'),
+                                        fit: BoxFit.cover
+                                      ),
                                     ),
-                                ),
-                                const Text(
-                                  "PGR",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                              ],
+                                  ),
+                                ],
+                              ),
                             ),
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(context, 
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return const Insecticides();
+                                  },
+                                ),
+                              );
+                            },
                           ),
-
+                          InkWell(
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 8),
+                              width: 115,
+                              height: 120,
+                              padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                              color: Colors.green.shade100,
+                              child: Column(
+                                children: <Widget>[
+                                  const Text("PGR", style: TextStyle(fontSize: 18,color: Colors.black, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
+                                  const SizedBox(height: 10),
+                                  Container(
+                                    width: 100,
+                                    height: 100,
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: NetworkImage('https://cff2.earth.com/uploads/2021/03/16173225/shutterstock_17212516244-scaled.jpg'),
+                                        fit: BoxFit.cover
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            onTap: () {
+                              Navigator.push(context, 
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return const Insecticides();
+                                  },
+                                ),
+                              );
+                            },
+                          ),
+                          InkWell(
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 8),
+                              width: 115,
+                              height: 120,
+                              padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                              color: Colors.green.shade100,
+                              child: Column(
+                                children: <Widget>[
+                                  const Text("Seeds", style: TextStyle(fontSize: 18,color: Colors.black, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
+                                  const SizedBox(height: 10),
+                                  Container(
+                                    width: 100,
+                                    height: 100,
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: NetworkImage('https://images.theconversation.com/files/307156/original/file-20191216-124022-r2addy.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop'),
+                                        fit: BoxFit.cover
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            onTap: () {
+                              Navigator.push(context, 
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return const Insecticides();
+                                  },
+                                ),
+                              );
+                            },
+                          ),
+                          InkWell(
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 8),
+                              width: 115,
+                              height: 120,
+                              padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                              color: Colors.green.shade100,
+                              child: Column(
+                                children: <Widget>[
+                                  const Text("Sprayers", style: TextStyle(fontSize: 18,color: Colors.black, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
+                                  const SizedBox(height: 10),
+                                  Container(
+                                    width: 100,
+                                    height: 100,
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: NetworkImage('https://media.istockphoto.com/vectors/man-in-hazmat-protective-suit-gas-mask-and-gas-cylinder-for-vector-id1215633147?k=20&m=1215633147&s=612x612&w=0&h=msDWp_ikadD-TwRS5MwE-8_HDezkMFozGLjJ1KcwZ6A='),
+                                        fit: BoxFit.cover
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            onTap: () {
+                              Navigator.push(context, 
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return const Insecticides();
+                                  },
+                                ),
+                              );
+                            },
+                          ),
+                          InkWell(
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 0),
+                              width: 115,
+                              height: 120,
+                              padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                              color: Colors.green.shade100,
+                              child: Column(
+                                children: <Widget>[
+                                  const Text("Tools", style: TextStyle(fontSize: 18,color: Colors.black, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
+                                  const SizedBox(height: 10),
+                                  Container(
+                                    width: 100,
+                                    height: 100,
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: NetworkImage('https://homesteading.com/wp-content/uploads/2021/03/Gardening-tools-and-utensils-on-a-lush-green-meadow-Farming-tools-Featured-SS-1200x900.jpg'),
+                                        fit: BoxFit.cover
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            onTap: () {
+                              Navigator.push(context, 
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return const Insecticides();
+                                  },
+                                ),
+                              );
+                            },
+                          ),  
                         ],
                       )
                     ),
