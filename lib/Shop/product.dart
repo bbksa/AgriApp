@@ -59,7 +59,7 @@ class _ProductState extends State<Product> {
                                   child: Flexible(
                                   fit: FlexFit.loose,
                                     child: Image.network(
-                                      "https://lh3.googleusercontent.com/p/AF1QipNSco18zvjwr1xtAf1jJVCa8VvuHvijcywchOSP=w768-h768-n-o-v1",
+                                      "https://i.pinimg.com/736x/7d/78/79/7d78792c4e9093237eec2092971055be.jpg",
                                       fit: BoxFit.cover,
                                     ),
                                   ),
@@ -74,11 +74,11 @@ class _ProductState extends State<Product> {
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: const <Widget>[
                                           Text(
-                                            "Trikaal-505",
+                                            "Sumo-505",
                                             style: TextStyle(fontWeight: FontWeight.bold),
                                           ),
                                           Text(
-                                            "Price 500 ",
+                                            "Price 500",
                                             style: TextStyle(fontWeight: FontWeight.bold),
                                           ),
                                         ],

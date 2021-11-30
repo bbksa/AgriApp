@@ -1,3 +1,4 @@
+import 'package:durgabeej/search.dart';
 import 'package:durgabeej/footer.dart';
 import 'package:flutter/material.dart';
 
@@ -18,16 +19,13 @@ class _CartState extends State<Cart> {
         elevation: 1.0,
         title: const SizedBox(
           height: 25.0, child: Text("Cart")),
-        actions: const <Widget>[
+        actions: <Widget>[
           Padding(
-            padding: EdgeInsets.only(right: 12.0),
+            padding: const EdgeInsets.only(right: 12.0),
             child: IconButton(
-                    icon: Icon(
-                      Icons.shopping_cart,
-                      color: Color(0xFFFFFFFF),
-                    ),
-                    onPressed: null,
-                  ),
+              onPressed: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (_) => SearchPage())),
+              icon: const Icon(Icons.search))
           )
         ],
       ),

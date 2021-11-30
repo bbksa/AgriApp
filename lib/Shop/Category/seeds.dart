@@ -1,22 +1,19 @@
 import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:durgabeej/category.dart';
 import 'package:durgabeej/search.dart';
 import 'package:durgabeej/Shop/product.dart';
 import 'package:durgabeej/footer.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class Shop extends StatefulWidget {
-  const Shop({Key? key}) : super(key: key);
+class Seeds extends StatefulWidget {
+  const Seeds({ Key? key }) : super(key: key);
 
   @override
-  ShopState createState() => ShopState();
+  _SeedsState createState() => _SeedsState();
 }
 
-class ShopState extends State<Shop> {
-  bool isPressed = false;
-
+class _SeedsState extends State<Seeds> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,10 +22,8 @@ class ShopState extends State<Shop> {
         centerTitle: true,
         elevation: 1.0,
         title: const SizedBox(
-          height: 25.0, 
-          child: Text("Shop")
-        ),
-        actions: <Widget>[
+          height: 25.0, child: Text("Seeds")),
+          actions: <Widget>[
           Padding(
             padding: const EdgeInsets.only(right: 12.0),
             child: IconButton(
@@ -37,9 +32,9 @@ class ShopState extends State<Shop> {
               icon: const Icon(Icons.search))
           )
         ],
-      ),
+        ),
 
-      body: Container(color: 
+        body: Container(color: 
         Colors.green.shade100,
         child: CustomScrollView(
           slivers: <Widget>[
@@ -101,7 +96,7 @@ class ShopState extends State<Shop> {
                     //Slider Container properties
                     options: CarouselOptions(
                       height: 180.0,
-                      enlargeCenterPage: true,
+                      // enlargeCenterPage: true,
                       autoPlay: true,
                       aspectRatio: 16 / 9,
                       autoPlayCurve: Curves.fastOutSlowIn,
@@ -112,30 +107,6 @@ class ShopState extends State<Shop> {
                   ),
                 ],
               ),
-            ),
-            SliverList(
-              delegate: SliverChildListDelegate(
-                [
-                  const Category()
-                ],
-              ),
-            ),
-            
-            SliverList(
-              delegate: SliverChildListDelegate(
-                [
-                  Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.all(4),
-                    color: Colors.green.shade800,
-                    margin: const EdgeInsets.only(left: 8, top: 8, right: 8),
-                    child: const Text("All Products",
-                      style: TextStyle(fontSize: 24, color: Colors.white),
-                      textAlign: TextAlign.center
-                    )
-                  ),
-                ]
-              )
             ),
             
             SliverList(
@@ -159,24 +130,6 @@ class ShopState extends State<Shop> {
                         mainAxisSize: MainAxisSize.min,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
-                          Container(
-                            height: 25,
-                            width: 125,
-                            color: Colors.white,
-                            padding: const EdgeInsets.all(5.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const <Widget>[
-                                Center(
-                                  child: Text(
-                                    "Insecticide",
-                                    style: TextStyle(fontWeight: FontWeight.bold),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
                           Container(
                             height: 125,
                             width: 125,
@@ -238,24 +191,6 @@ class ShopState extends State<Shop> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Container(
-                            height: 25,
-                            width: 125,
-                            color: Colors.white,
-                            padding: const EdgeInsets.all(5.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const <Widget>[
-                                Center(
-                                  child: Text(
-                                    "Herbicide",
-                                    style: TextStyle(fontWeight: FontWeight.bold),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
                             height: 125,
                             width: 125,
                             color: Colors.teal[300],
@@ -306,24 +241,6 @@ class ShopState extends State<Shop> {
                         mainAxisSize: MainAxisSize.min,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
-                          Container(
-                            height: 25,
-                            width: 125,
-                            color: Colors.white,
-                            padding: const EdgeInsets.all(5.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const <Widget>[
-                                Center(
-                                  child: Text(
-                                    "PGR",
-                                    style: TextStyle(fontWeight: FontWeight.bold),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
                           Container(
                             height: 125,
                             width: 125,
@@ -378,23 +295,56 @@ class ShopState extends State<Shop> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Container(
-                            height: 25,
+                            height: 125,
+                            width: 125,
+                            color: Colors.teal[300],
+                            padding: const EdgeInsets.all(8),
+                            child: Flexible(
+                              fit: FlexFit.loose,
+                              child: Image.network(
+                                "https://lh3.googleusercontent.com/p/AF1QipNSco18zvjwr1xtAf1jJVCa8VvuHvijcywchOSP=w768-h768-n-o-v1",
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 50,
                             width: 125,
                             color: Colors.white,
-                            padding: const EdgeInsets.all(5.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const <Widget>[
-                                Center(
-                                  child: Text(
-                                    "Insecticide",
-                                    style: TextStyle(fontWeight: FontWeight.bold),
-                                    textAlign: TextAlign.center,
-                                  ),
+                              children: <Widget>[
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const <Widget>[
+                                    Text(
+                                      "Trikaal-505",
+                                      style:
+                                          TextStyle(fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      "Price 500 ",
+                                      style:
+                                          TextStyle(fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
                                 ),
+                                const Icon(FontAwesomeIcons.shoppingCart)
                               ],
                             ),
                           ),
+                        ],
+                      ),
+                      onTap: () {},
+                    ),
+                    InkWell(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
                           Container(
                             height: 125,
                             width: 125,
@@ -447,23 +397,220 @@ class ShopState extends State<Shop> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Container(
-                            height: 25,
+                            height: 125,
+                            width: 125,
+                            color: Colors.teal[300],
+                            padding: const EdgeInsets.all(8),
+                            child: Flexible(
+                              fit: FlexFit.loose,
+                              child: Image.network(
+                                "https://lh3.googleusercontent.com/p/AF1QipNSco18zvjwr1xtAf1jJVCa8VvuHvijcywchOSP=w768-h768-n-o-v1",
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 50,
                             width: 125,
                             color: Colors.white,
-                            padding: const EdgeInsets.all(5.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const <Widget>[
-                                Center(
-                                  child: Text(
-                                    "Tnsecticide",
-                                    style: TextStyle(fontWeight: FontWeight.bold),
-                                    textAlign: TextAlign.center,
-                                  ),
+                              children: <Widget>[
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const <Widget>[
+                                    Text(
+                                      "Trikaal-505",
+                                      style:
+                                          TextStyle(fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      "Price 500 ",
+                                      style:
+                                          TextStyle(fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
                                 ),
+                                const Icon(FontAwesomeIcons.shoppingCart)
                               ],
                             ),
                           ),
+                        ],
+                      ),
+                      onTap: () {},
+                    ),
+                    InkWell(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                            height: 125,
+                            width: 125,
+                            color: Colors.teal[300],
+                            padding: const EdgeInsets.all(8),
+                            child: Flexible(
+                              fit: FlexFit.loose,
+                              child: Image.network(
+                                "https://i.pinimg.com/736x/7d/78/79/7d78792c4e9093237eec2092971055be.jpg",
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 50,
+                            width: 125,
+                            color: Colors.white,
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const <Widget>[
+                                    Text(
+                                      "Sumo-505",
+                                      style:
+                                          TextStyle(fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      "Price 500",
+                                      style:
+                                          TextStyle(fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                                const Icon(FontAwesomeIcons.shoppingCart)
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return const Product();
+                            },
+                          ),
+                        );
+                      },
+                    ),
+                    InkWell(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                            height: 125,
+                            width: 125,
+                            color: Colors.teal[300],
+                            padding: const EdgeInsets.all(8),
+                            child: Flexible(
+                              fit: FlexFit.loose,
+                              child: Image.network(
+                                "https://i.pinimg.com/originals/de/e9/8b/dee98b8f19a8a2bdd7aaf51207bae5be.png",
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 50,
+                            width: 125,
+                            color: Colors.white,
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const <Widget>[
+                                    Text(
+                                      "Panda",
+                                      style:
+                                          TextStyle(fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      "Price 500 ",
+                                      style:
+                                          TextStyle(fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                                const Icon(FontAwesomeIcons.shoppingCart)
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      onTap: () {},
+                    ),
+                    InkWell(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                            height: 125,
+                            width: 125,
+                            color: Colors.teal[300],
+                            padding: const EdgeInsets.all(8),
+                            child: Flexible(
+                              fit: FlexFit.loose,
+                              child: Image.network(
+                                "https://i.pinimg.com/564x/20/bb/81/20bb81e815ade3ab60cb0a20623ea856.jpg",
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 50,
+                            width: 125,
+                            color: Colors.white,
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const <Widget>[
+                                    Text(
+                                      "Crystal",
+                                      style:
+                                          TextStyle(fontWeight: FontWeight.bold),
+                                      textAlign: TextAlign.left,
+                                    ),
+                                    Text(
+                                      "Price 500 ",
+                                      style:
+                                          TextStyle(fontWeight: FontWeight.bold),
+                                      textAlign: TextAlign.left,
+                                    ),
+                                  ],
+                                ),
+                                const Icon(FontAwesomeIcons.shoppingCart)
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      onTap: () {},
+                    ),
+                    InkWell(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
                           Container(
                             height: 125,
                             width: 125,
@@ -516,23 +663,56 @@ class ShopState extends State<Shop> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Container(
-                            height: 25,
+                            height: 125,
+                            width: 125,
+                            color: Colors.teal[300],
+                            padding: const EdgeInsets.all(8),
+                            child: Flexible(
+                              fit: FlexFit.loose,
+                              child: Image.network(
+                                "https://lh3.googleusercontent.com/p/AF1QipNSco18zvjwr1xtAf1jJVCa8VvuHvijcywchOSP=w768-h768-n-o-v1",
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 50,
                             width: 125,
                             color: Colors.white,
-                            padding: const EdgeInsets.all(5.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const <Widget>[
-                                Center(
-                                  child: Text(
-                                    "Tnsecticide",
-                                    style: TextStyle(fontWeight: FontWeight.bold),
-                                    textAlign: TextAlign.center,
-                                  ),
+                              children: <Widget>[
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const <Widget>[
+                                    Text(
+                                      "Trikaal-505",
+                                      style:
+                                          TextStyle(fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      "Price 500 ",
+                                      style:
+                                          TextStyle(fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
                                 ),
+                                const Icon(FontAwesomeIcons.shoppingCart)
                               ],
                             ),
                           ),
+                        ],
+                      ),
+                      onTap: () {},
+                    ),
+                    InkWell(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
                           Container(
                             height: 125,
                             width: 125,
