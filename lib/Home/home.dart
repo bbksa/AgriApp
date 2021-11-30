@@ -1,7 +1,7 @@
 import 'package:durgabeej/Home/home_body.dart';
 import 'package:durgabeej/Home/menu.dart';
-import 'package:durgabeej/search.dart';
-import 'package:durgabeej/footer.dart';
+import 'package:durgabeej/Components/search.dart';
+import 'package:durgabeej/Components/footer.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {

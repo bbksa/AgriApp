@@ -1,10 +1,9 @@
-
 import 'package:durgabeej/Home/home.dart';
 import 'package:durgabeej/Learn/learn.dart';
 import 'package:durgabeej/Shop/cart.dart';
 import 'package:flutter/material.dart';
 
-import 'Shop/shop.dart';
+import '../Shop/shop.dart';
 
 class Footer extends StatelessWidget {
   const Footer ({ Key? key }) : super(key: key);

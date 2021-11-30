@@ -1,4 +1,4 @@
-import 'package:durgabeej/footer.dart';
+import 'package:durgabeej/Components/footer.dart';
 import 'package:flutter/material.dart';
 
 class Learn extends StatefulWidget {
