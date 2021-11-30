@@ -1,3 +1,4 @@
+import 'package:durgabeej/Home/Menu_Pages/event.dart';
 import 'package:durgabeej/Learn/learn.dart';
 import 'package:durgabeej/Shop/shop.dart';
 import 'package:flutter/material.dart';
@@ -94,13 +95,20 @@ class _MenuState extends State<Menu> {
                 preferredSize: const Size.fromHeight(4.0)),
             const SizedBox(height: 10),
             ListTile(
-              onTap: () {
-                Navigator.pop(context);
-              },
               leading: const Icon(Icons.event, color: Colors.black),
               title: const Text('Events'),
               hoverColor: Colors.red,
               tileColor: Colors.green.shade200,
+              onTap: () {
+                Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const Event();
+                          },
+                        ),
+                      );
+              },
             ),
             const SizedBox(height: 10),
             ListTile(

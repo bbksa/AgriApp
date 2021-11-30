@@ -1,4 +1,4 @@
-import 'package:durgabeej/Components/drop.dart';
+import 'package:durgabeej/Components/qty_drop.dart';
 import 'package:durgabeej/Components/search.dart';
 import 'package:durgabeej/Components/footer.dart';
 import 'package:flutter/material.dart';
@@ -70,12 +70,12 @@ class _CartState extends State<Cart> {
                       children: [
                         Container(
                           width: 200,
-                          color: Colors.orange,
+                          color: Colors.orange.shade300,
                           padding: const EdgeInsets.all(10),
                           margin: const EdgeInsets.all(10),
                           child: Row(
                             children: const [
-                              Icon(Icons.money_off_csred_sharp),
+                              Icon(Icons.payment),
                               Text("Buy Now")
                             ],
                           ),
@@ -83,7 +83,8 @@ class _CartState extends State<Cart> {
                         const Spacer(),
                         Container(
                           width: 200,
-                          color: Colors.red,
+                          alignment: Alignment.center,
+                          color: Colors.red.shade300,
                           padding: const EdgeInsets.all(10),
                           margin: const EdgeInsets.all(10),
                           child: Row(
@@ -101,29 +102,36 @@ class _CartState extends State<Cart> {
                 margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
                 color: Colors.grey.shade200,
                 child: Column(
-                  children: const [
-                    Text("Price Details"),
-                    
-                    SizedBox(height: 10),
-
-                    Text("Price - Items Number"),
-                    Text("12,000/-"),
-                    
-                    SizedBox(height: 10),
-
-                    Text("Discount"),
-                    Text("12,000/-"),
-
-                    SizedBox(height: 10),
-
-                    Text("Delivery Charge"),
-                    Text("12,000/-"),
-
-                    SizedBox(height: 10),
-
-                    Text("Total Amount"),
-                    Text("12,000/-"),
-
+                  children: <Widget>[
+                    const Text("Price Details", textAlign: TextAlign.center,),
+                    Row(
+                      children: const [
+                        Text("Price - Items Number"),
+                        Spacer(),
+                        Text("12,000/-"),
+                      ],
+                    ),
+                    Row(
+                      children: const [
+                        Text("Discount"),
+                        Spacer(),
+                        Text("1200/-"),
+                      ],
+                    ),
+                    Row(
+                      children: const [
+                        Text("Delivery Charge"),
+                        Spacer(),
+                        Text("100/-"),
+                      ],
+                    ),
+                    Row(
+                      children: const [
+                        Text("Total Amount"),
+                        Spacer(),
+                        Text("12,000/-"),
+                      ],
+                    ),
                   ],
                 ),
               ),
