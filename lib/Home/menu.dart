@@ -1,3 +1,4 @@
+import 'package:durgabeej/Home/Menu_Pages/contact.dart';
 import 'package:durgabeej/Home/Menu_Pages/event.dart';
 import 'package:durgabeej/Learn/learn.dart';
 import 'package:durgabeej/Shop/shop.dart';
@@ -164,7 +165,7 @@ class _MenuState extends State<Menu> {
                 Navigator.push(context, 
                   MaterialPageRoute(
                     builder: (context) {
-                      return const Shop();
+                      return const Contactus();
                     },
                   ),
                 );

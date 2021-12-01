@@ -1,0 +1,22 @@
+{
+  "offices": [
+    {
+      "address": "Aabogade 15\n8200 Aarhus\nDenmark",
+      "id": "aarhus",
+      "image": "https://lh3.googleusercontent.com/tpBMFN5os8K-qXIHiAX5SZEmN5fCzIGrj9FdJtbZPUkC91ookSoY520NYn7fK5yqmh1L1m3F2SJA58v6Qps3JusdrxoFSwk6Ajv2K88",
+      "lat": 56.172249,
+      "lng": 10.187372,
+      "name": "Aarhus",
+      "phone": "",
+      "region": "europe"
+    }
+  ],
+  "regions": [
+    {
+      "coords": { "lat": 2.9660291, "lng": 1.3271339 },
+      "id": "africa-middle-east",
+      "name": "Africa & Middle East",
+      "zoom": 3.0
+    }
+  ]
+}
