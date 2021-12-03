@@ -1,4 +1,4 @@
-import 'package:durgabeej/Home/home.dart';
+import 'package:durgabeej/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           primaryTextTheme: const TextTheme(
               bodyText1: TextStyle(color: Colors.black, fontFamily: "Aveny")),
           textTheme: const TextTheme(bodyText1: TextStyle(color: Colors.black))),
-      home: const Home(),
+      home: const AnimatedSplashScreen(),
     );
   }
 }

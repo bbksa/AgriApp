@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:durgabeej/Components/category.dart';
+import 'package:durgabeej/Shop/category.dart';
 import 'package:durgabeej/Components/search.dart';
 import 'package:durgabeej/Shop/product.dart';
 import 'package:durgabeej/Components/footer.dart';

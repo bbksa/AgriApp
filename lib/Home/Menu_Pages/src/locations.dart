@@ -88,6 +88,7 @@ Future<Locations> getGoogleOffices() async {
       return Locations.fromJson(json.decode(response.body));
     }
   } catch (e) {
+    // ignore: avoid_print
     print(e);
   }
 
